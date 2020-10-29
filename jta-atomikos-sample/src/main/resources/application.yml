@@ -1,0 +1,20 @@
+spring:
+  jta:
+    transaction-manager-id: txManager
+  datasource:
+    type: com.alibaba.druid.pool.xa.DruidXADataSource
+    druid:
+      order:
+        name: order
+        url: jdbc:mysql://106.14.169.161:3306/order?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+        userName: root
+        passWord:
+      storage:
+        name: storage
+        url: jdbc:mysql://106.14.169.161:3306/storage?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+        userName: root
+        passWord:
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations:
